@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lisa-gap-imputer"
+version = "0.1.0"
+description = "Exploratory transformer-based imputer for masked LISA-like strain segments"
+authors = [{ name = "Karan Akbari" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26,<3",
+    "scipy>=1.11,<2",
+    "matplotlib>=3.8,<4",
+    "torch>=2.2,<3",
+    "scikit-learn>=1.4,<2",
+    "h5py>=3.10,<4",
+    "tqdm>=4.66,<5",
+    "pyyaml>=6.0,<7",
+    "smbhb-inspiral @ git+https://github.com/WizardEternal/smbhb-inspiral@main",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<9",
+    "hypothesis>=6.100,<7",
+    "mypy>=1.10,<2",
+    "ruff>=0.5,<1",
+    "black",
+    "pre-commit",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: mark test as slow (deselect with -m \"not slow\")",
+]
+
+[tool.mypy]
+strict = true
+packages = ["lisa_gap_imputer"]
+
+[tool.ruff]
+line-length = 99
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "ANN", "B", "SIM"]
+
+[tool.black]
+line-length = 99

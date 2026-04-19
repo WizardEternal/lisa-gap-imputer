@@ -1,0 +1,6 @@
+method,median_mse_masked,iqr_mse_masked,median_snr_recovery_smbhb,n_smbhb,n_segments
+model,3.117174e-04,4.685919e-04,0.9954,479,1000
+zero,9.497447e-01,1.516764e+00,0.9965,479,1000
+linear,1.775533e-04,5.939269e-04,0.9921,479,1000
+cubic_spline,3.202606e-04,6.512027e-04,0.9914,479,1000
+gp_matern32,7.775501e-06,2.363753e-05,0.9912,479,1000

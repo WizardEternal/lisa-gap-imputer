@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyc
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Testing and type checking
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Generated outputs — only keep committed figures under outputs/figures/committed/
+outputs/checkpoints/*
+!outputs/checkpoints/.gitkeep
+outputs/metrics/*
+!outputs/metrics/.gitkeep
+outputs/data/
+*.h5
+*.hdf5
+*.pt
+*.ckpt
+
+# Local run logs
+*.log
+runs/
+wandb/
